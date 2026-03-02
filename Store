@@ -1,0 +1,56 @@
+using System;
+
+namespace Programa
+{
+    class Loja
+    {
+        static void Main(string[] args)
+        {
+            Arte camiseta = new Arte(1, "Camisa do Ghost", 129.99, ETipoProduto.Camisa);
+            Console.WriteLine(camiseta.Id);
+            Console.WriteLine(camiseta.Nome);
+            Console.WriteLine(camiseta.Preco);
+            Console.WriteLine(camiseta.Tipo);
+        
+            Arte pintura = new Arte(2, "Solo leveling", 69.99, ETipoProduto.Quadro);
+            Console.WriteLine(pintura.Id);
+            Console.WriteLine(pintura.Nome);
+            Console.WriteLine(pintura.Preco);
+            Console.WriteLine(pintura.Tipo);
+            
+            Arte escultura = new Arte(3, "Page holder", 39.99, ETipoProduto.Ceramica);
+            Console.WriteLine(escultura.Id);
+            Console.WriteLine(escultura.Nome);
+            Console.WriteLine(escultura.Preco);
+            Console.WriteLine(escultura.Tipo);
+            
+            Arte jeans = new Arte(4, "Calça com ondas", 99.99, ETipoProduto.Calca);
+            Console.WriteLine(jeans.Id);
+            Console.WriteLine(jeans.Nome);
+            Console.WriteLine(jeans.Preco);
+            Console.WriteLine(jeans.Tipo);
+        }
+    }
+    struct Arte
+    {
+        public Arte(int id, string nome, double preco, ETipoProduto tipo)
+        {
+            Id = id;
+            Nome = nome;
+            Preco = preco;
+            Tipo = tipo;
+        }
+    
+        public int Id;
+        public string Nome;
+        public double Preco;
+        public ETipoProduto Tipo;
+    }
+    enum ETipoProduto
+    {
+        Camisa = 1,
+        Quadro = 2,
+        Ceramica = 3,
+        Calca = 4
+    }
+}
